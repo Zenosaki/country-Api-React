@@ -11,8 +11,8 @@ export default function HomePage(){
   return(
     <div className={`HomePage-Container ${darkMode ? 'Dark-Mode-On' : 'Dark-Mode-Off'}`}>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
-      <main>
-      </main>
+      <div className={`Main-Content ${darkMode ? 'Main-DarkMode' : 'M Main-DarkMode-Off'}`}>
+      </div>
     </div>
   )
 }

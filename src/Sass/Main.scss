@@ -1,21 +1,34 @@
-.HomePage-Container.Dark-Mode-On {
-  background-color: #333;
-  color: white;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+@import './Mixins.scss';
+@import './Colors.scss';
+@import './components/Header';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-.headerContainer.Dark-Mode-On {
-  background-color: #333;
-  color: white;
+.HomePage-Container{
+  .Dark-Mode-On{
+    background-color: $DarkBlue;
+    color: $White;
+  }
+  .Dark-Mode-Off {
+    background-color: $White;
+    color: $VeryDarkBlue;
+  }
+}
+.Main-Content{
+  width: 100%;
+  height: 100vh;
+}
+.Main-DarkMode{
+  background-color: $VeryDarkBlue1;
+  color: $White;
+}
+.Main-DarkMode-Off{
+  background-color: $VeryLightGray;
 }
 
-
-
-.HomePage-Container.Dark-Mode-Off {
-  background-color: white;
-  color: black;
-}
-
-.headerContainer.Dark-Mode-Off {
-  background-color: white;
-  color: black;
-}

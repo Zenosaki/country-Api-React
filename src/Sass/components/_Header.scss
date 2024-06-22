@@ -1,0 +1,25 @@
+.headerContainer{
+  width: 100%;
+  padding: 25px 4%;
+  padding-right: 5%;
+  font-weight: bold;
+  @include flex(center,space-between);
+  .Dark-Mode-Button{
+    @include flex(center,center);
+    gap: 10px;
+  }
+  .Dark-Mode-On {
+    background-color: $DarkBlue;
+    color: $White;
+  }
+  .Dark-Mode-Off {
+    background-color: $White;
+    color: $VeryDarkBlue;
+  }
+}
+
+@media (max-width: 375px){
+  .headerContainer{
+    font-size: xx-small;
+  }
+}
