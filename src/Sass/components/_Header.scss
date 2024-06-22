@@ -3,10 +3,12 @@
   padding: 25px 4%;
   padding-right: 5%;
   font-weight: bold;
+  transition: all 0.5s ease;
   @include flex(center,space-between);
   .Dark-Mode-Button{
     @include flex(center,center);
     gap: 10px;
+    cursor: pointer;
   }
   .Dark-Mode-On {
     background-color: $DarkBlue;
