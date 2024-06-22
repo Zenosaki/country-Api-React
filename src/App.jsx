@@ -2,6 +2,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import HomePage from './pages/Home.jsx';
 import InfoPage from './pages/Info.jsx';
 
+
 export default function App() {
   return (
     <div>

@@ -1,16 +1,11 @@
-import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon as faSolidMoon } from '@fortawesome/free-solid-svg-icons';
 import { faMoon as faRegularMoon } from '@fortawesome/free-regular-svg-icons';
+import PropTypes from 'prop-types';
 
-export default function Header(){
-  const [darkMode,setDarkMode]=useState(false)
-
-  const toggleDarkMode =()=>{
-    setDarkMode(!darkMode);
-  }
+export default function Header({ darkMode, toggleDarkMode }){
   return(
-    <div className="headerContainer Dark-Mode-On">
+    <div className={`headerContainer ${darkMode ? 'Dark-Mode-On' : 'Dark-Mode-Off'}`}>
       <h1>Where in the world?</h1>
       <div className="Dark-Mode-Button" onClick={toggleDarkMode}>
         <FontAwesomeIcon icon={darkMode ?faSolidMoon: faRegularMoon}/>
@@ -19,3 +14,8 @@ export default function Header(){
     </div>
   )
 }
+
+Header.propTypes = {
+  darkMode: PropTypes.bool.isRequired,
+  toggleDarkMode: PropTypes.func.isRequired,
+};
