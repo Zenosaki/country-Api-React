@@ -39,7 +39,27 @@
   }
   .Dark-Mode-Cards{
     background-color:$DarkBlue;
+    .Country-Info{
+      ul{
+        li{
+          span{
+            color:$White;
+            transition: all 0.4s ease;
+          }
+        }
+      }
+    }
   }
-  //.Light-Mode-Cards{
-  //}
+  .Light-Mode-Cards{
+    .Country-Info{
+      ul{
+        li{
+          span{
+            color: $VeryDarkBlue;
+            transition: all 0.4s ease;
+          }
+        }
+      }
+    }
+  }
 }
