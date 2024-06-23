@@ -20,7 +20,7 @@
     padding: 5.5vh 4%;
     padding-right: 5%;
     @include flex(center,space-between);
-    
+
     .custom-select {
       border:none;
       outline: none;
@@ -29,15 +29,12 @@
       font-size: 16px;
       width: 200px; 
       cursor: pointer;
+      border-color: #aaa;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     
     .custom-select option {
       padding: 10px;
-    }
-    
-    .custom-select:focus {
-      border-color: #aaa;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     
     
@@ -59,6 +56,8 @@
       display: flex;
       align-items: center;
       gap: 20px;
+      border-color: #aaa;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       input{
         background-color: transparent;
         border: none;
