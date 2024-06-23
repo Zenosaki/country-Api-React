@@ -41,6 +41,7 @@
     }
   }
   .Dark-Mode-On{
+    transition: all 0.5s ease;
     background-color: $DarkBlue;
     color: $White;
     }
@@ -48,16 +49,17 @@
   .Dark-Mode-Off {
     background-color: $White;
     color: $VeryDarkBlue;
+    transition: all 0.5s ease;
 }
 .Main-Content{
   width: 100%;
   height: auto;
   padding-bottom: 70px;
-  transition: all 0.5s ease;
 }
 .Main-DarkMode{
   background-color: $VeryDarkBlue1;
   color: $White;
+  transition: all 0.5s ease;
   .SearchBar{
     input[type="text"]{
       color:$White;
@@ -74,5 +76,6 @@
       color:$DarkGray;
     }
   }
+  transition: all 0.5s ease;
 }
 
