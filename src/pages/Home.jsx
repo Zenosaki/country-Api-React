@@ -45,12 +45,12 @@ export default function HomePage() {
           </div>
           <select
             onChange={handleRegionChange}
-            className={`${darkMode ? 'Dark-Mode-On' : 'Dark-Mode-Off'}`}
+            className={`custom-select ${darkMode ? 'Dark-Mode-On' : 'Dark-Mode-Off'}`}
             name='Region'
             id='Reg'
             value={selectedRegion}
           >
-            <option value=''>Filter by Region</option>
+            <option value=''>All</option>
             <option value='Africa'>Africa</option>
             <option value='Americas'>Americas</option>
             <option value='Asia'>Asia</option>
