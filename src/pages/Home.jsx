@@ -15,7 +15,6 @@ export default function HomePage(){
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <div className={`Main-Content ${darkMode ? 'Main-DarkMode' : ' Main-DarkMode-Off'}`}>
         <nav>
-
           <div className={`SearchBar ${darkMode ? 'Dark-Mode-On' : 'Dark-Mode-Off'}`}>
           <FontAwesomeIcon className='Search-Icon' icon={faMagnifyingGlass} />
           <input type="text" placeholder='Search for a country...' />
@@ -29,6 +28,9 @@ export default function HomePage(){
             <option value="Oceania">Oceania</option>
           </select>
         </nav>
+        <div className="Countries-Cards-Section">
+          
+        </div>
       </div>
     </div>
   )

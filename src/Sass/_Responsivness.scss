@@ -1,0 +1,15 @@
+@media (max-width: 430px){
+  *{
+    font-size: xx-small;
+  }
+  .HomePage-Container{
+    width: 100%;
+    nav{
+      flex-wrap: wrap;
+      gap: 30px;
+      .SearchBar{
+        width: 100%;
+      }
+    }
+  }
+}
