@@ -12,14 +12,40 @@
 }
 
 .HomePage-Container{
+  nav{
+    background-color: transparent;
+    width: 100%;
+    padding: 5.5vh 4%;
+    padding-right: 5%;
+    @include flex(center,space-between);
+    select{
+      padding:10px 45px;
+      border: none;
+      border-radius: 5px;
+      @include flex(center,space-between);
+    }
+    .SearchBar{
+      padding: 15px 30px;
+      width: 480px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      input{
+        background-color: transparent;
+        border: none;
+        outline: none;
+      }
+    }
+  }
   .Dark-Mode-On{
     background-color: $DarkBlue;
     color: $White;
+    }
   }
   .Dark-Mode-Off {
     background-color: $White;
     color: $VeryDarkBlue;
-  }
 }
 .Main-Content{
   width: 100%;
@@ -29,8 +55,21 @@
 .Main-DarkMode{
   background-color: $VeryDarkBlue1;
   color: $White;
+  .SearchBar{
+    input[type="text"]{
+      color:$White;
+      &::placeholder{
+        color: $White;
+      }
+    }
+  }
 }
 .Main-DarkMode-Off{
   background-color: $VeryLightGray;
+  .SearchBar{
+    .Search-Icon{
+      color:$DarkGray;
+    }
+  }
 }
 
