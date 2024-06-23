@@ -4,7 +4,7 @@
   justify-content: $justify;
 }
 
-@mixin grid($aligne,$columnsNum,$columnsgap,$columnsrowgap){
+@mixin grid($columnsNum,$columnsgap,$columnsrowgap){
   display: grid;
   align-items: center;
   grid-template-columns: $columnsNum;

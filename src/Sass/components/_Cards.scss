@@ -1,0 +1,45 @@
+.Countries-Cards-Section{
+  width: 100%;
+  padding-left: 4%;
+  padding-right: 5%;
+  @include grid(1fr 1fr 1fr 1fr,70px,70px);
+  .card-Container{
+    max-width:360px;
+    height: 450px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .logo{
+      width: 100%;
+      height: 55%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .Country-Info{
+      padding:8% 8%;
+      flex: 1;
+      h3{
+        padding-bottom: 15px;
+      }
+      ul{
+        list-style-type: none;
+        li{
+          padding-bottom: 5px;
+          span{
+            color:$VeryLightGray;
+            font-weight: thin;
+          }
+        }
+      }
+    }
+  }
+  .Dark-Mode-Cards{
+    background-color:$DarkBlue;
+  }
+  //.Light-Mode-Cards{
+  //}
+}

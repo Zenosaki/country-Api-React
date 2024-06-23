@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import '../Sass/Main.scss';
 import { useState } from "react"
+import data from '../data.json';
+import Card from "../components/CountryCard.jsx";
 
 export default function HomePage(){
   const [darkMode,setDarkMode]=useState(false)
@@ -29,7 +31,16 @@ export default function HomePage(){
           </select>
         </nav>
         <div className="Countries-Cards-Section">
-          
+        {data.countries.map((country,index) => (
+          <Card class={`${darkMode ? 'Dark-Mode-Cards' : 'Light-Mode-Cards'}`}
+           key={index} 
+           logo={country.flag}
+           Title={country.name} 
+           Population={country.population} 
+           Region={country.region} 
+           Capital={country.capital}
+           />
+        ))}
         </div>
       </div>
     </div>
