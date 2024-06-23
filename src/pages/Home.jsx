@@ -8,7 +8,15 @@ import Card from "../components/CountryCard.jsx";
 
 export default function HomePage(){
   const [darkMode,setDarkMode]=useState(false)
+  const [selectedRegion, setSelectedRegion] = useState('');
 
+  const handleRegionChange = (event) => {
+    setSelectedRegion(event.target.value);
+  };
+
+  const filteredCountries = selectedRegion
+  ? data.countries.filter((country) => country.region === selectedRegion)
+  : data.countries;
   const toggleDarkMode =()=>{
     setDarkMode(!darkMode);
   }
@@ -21,17 +29,17 @@ export default function HomePage(){
           <FontAwesomeIcon className='Search-Icon' icon={faMagnifyingGlass} />
           <input type="text" placeholder='Search for a country...' />
           </div>
-          <select className={`${darkMode ? 'Dark-Mode-On' : 'Dark-Mode-Off'}`}  name="Region" id="Reg">
+          <select onChange={handleRegionChange} className={`${darkMode ? 'Dark-Mode-On' : 'Dark-Mode-Off'}`}  name="Region" id="Reg">
             <option value="" selected>Filter by Region</option>
             <option value="Africa">Africa</option>
-            <option value="America">America</option>
+            <option value="Americas">Americas</option>
             <option value="Asia">Asia</option>
             <option value="Europe">Europe</option>
             <option value="Oceania">Oceania</option>
           </select>
         </nav>
         <div className="Countries-Cards-Section">
-        {data.countries.map((country,index) => (
+        {filteredCountries.map((country,index) => (
           <Card class={`${darkMode ? 'Dark-Mode-Cards' : 'Light-Mode-Cards'}`}
            key={index} 
            logo={country.flag}
