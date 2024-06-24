@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export default function Card(props){
   return(
-    <div className={`card-Container ${props.class}`}>
+    <div className={`card-Container ${props.class}`} onClick={props.onclick}>
       <div className="logo">
         <img src={props.logo} alt="Logo" />
       </div>
@@ -26,4 +26,5 @@ Card.propTypes = {
   Region: PropTypes.string,
   Capital: PropTypes.string,
   class: PropTypes.string,
+  onclick: PropTypes.func,
 };

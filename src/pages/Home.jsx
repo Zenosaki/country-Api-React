@@ -5,11 +5,13 @@ import '../Sass/Main.scss';
 import { useState } from 'react';
 import data from '../data.json';
 import Card from '../components/CountryCard.jsx';
+import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
   const [darkMode, setDarkMode] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState('');
   const [searchByName, setSearchByName] = useState('');
+  const navigate = useNavigate();
 
   const handleRegionChange = (event) => {
     setSelectedRegion(event.target.value);
@@ -17,6 +19,10 @@ export default function HomePage() {
 
   const handleSearchChange = (event) => {
     setSearchByName(event.target.value);
+  };
+
+  const handleCardClick = (country) => {
+    navigate(`/info/${country.name}`);
   };
 
   const filteredCountries = data.countries.filter((country) => {
@@ -61,6 +67,7 @@ export default function HomePage() {
         <div className='Countries-Cards-Section'>
           {filteredCountries.map((country, index) => (
             <Card
+              onclick={() => handleCardClick(country)}
               class={`${darkMode ? 'Dark-Mode-Cards' : 'Light-Mode-Cards'}`}
               key={index}
               logo={country.flag}

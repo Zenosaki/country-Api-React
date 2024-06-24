@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export default function Header({ darkMode, toggleDarkMode }){
   return(
     <div className={`headerContainer ${darkMode ? 'Dark-Mode-On' : 'Dark-Mode-Off'}`}>
-      <h2>Where in the world?</h2>
+      <h1>Where in the world?</h1>
       <div className="Dark-Mode-Button" onClick={toggleDarkMode}>
         <FontAwesomeIcon icon={darkMode ?faSolidMoon: faRegularMoon}/>
         <p>Dark Mode</p>
