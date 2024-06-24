@@ -1,8 +1,10 @@
 @media (max-width: 430px){
-  
+  .headerContainer{
+    font-size: x-small;
+  }
   .HomePage-Container{
     width: 100%;
-    font-size: xx-small;
+    font-size: x-small;
     nav{
       flex-wrap: wrap;
       gap: 30px;
@@ -14,6 +16,9 @@
       grid-template-columns: 1fr;
       font-size: small;
       padding: 0px 40px;
+    }
+    .Info-Page-Container{
+      font-size: x-small;
     }
   }
 }

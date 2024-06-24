@@ -66,7 +66,7 @@ export default function HomePage() {
         </nav>
         <div className='Countries-Cards-Section'>
           {filteredCountries.map((country, index) => (
-            <Card
+            <Card 
               onclick={() => handleCardClick(country)}
               class={`${darkMode ? 'Dark-Mode-Cards' : 'Light-Mode-Cards'}`}
               key={index}

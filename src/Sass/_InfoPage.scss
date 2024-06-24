@@ -1,0 +1,58 @@
+.Info-Page-Container{
+  transition: all 0.5s ease;
+  width: 100%;
+  height: 92vh;
+  padding: 8vh 4%;
+  padding-right: 5%;
+  color:$VeryDarkBlue ;
+  .Go-Back-Button-Container{
+    padding-top: 20%;
+    text-decoration: none;
+    .Go-Back-Button{
+      @include flex(center,center);
+      gap: 10px;
+      padding: 10px 40px;
+      font-size: 15px;
+      border: 1px;
+      border-color: #aaa;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.189);
+      letter-spacing: 1px;
+      border-radius: 5px;
+    }
+  }
+  .Main-content{
+    padding-top: 8vh;
+    width: 100%;
+    height: 80%;
+    @include grid(45% 1fr,13%,auto);
+    align-items: center;
+    .Country-Flag{
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .Country-Informations{
+      width: 100%;
+      height: 100%;
+      background-color: aqua;
+    }
+  }
+}
+}
+
+.Info-Page-Dark-Mode-On{
+  transition: all 0.5s ease;
+  background-color: $VeryDarkBlue1;
+  color: $White;
+  .Go-Back-Button{
+    transition: all 0.5s ease;
+    color: $White;
+    background-color:$DarkBlue;
+  }
+}
