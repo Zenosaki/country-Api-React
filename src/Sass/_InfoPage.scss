@@ -40,10 +40,21 @@
     .Country-Informations{
       width: 100%;
       height: 100%;
-      background-color: aqua;
     }
   }
 }
+}
+.Country-Details{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  ul{
+    li{
+      list-style-type: none;
+      padding: 5px;
+    }
+  }
 }
 
 .Info-Page-Dark-Mode-On{
@@ -54,5 +65,14 @@
     transition: all 0.5s ease;
     color: $White;
     background-color:$DarkBlue;
+  }
+  .Country-Details{
+    ul{
+      li{
+        span{
+          color: $White;
+        }
+      }
+    }
   }
 }

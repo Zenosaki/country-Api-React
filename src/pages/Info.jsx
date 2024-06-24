@@ -41,7 +41,7 @@ export default function InfoPage() {
       if (borderCountry) {
         return (
           <Link className='BorderCountry-Button' key={borderCountry.alpha3Code} to={`/info/${borderCountry.name}`}>
-            <button>{borderCountry.name}</button>
+            <button>{borderCountry.name}</button> 
           </Link>
         );
       } else {
@@ -81,8 +81,7 @@ export default function InfoPage() {
               </ul>
             </div>
             <div>
-              <p>Border Countries:</p>
-              {renderBorderCountries()}
+              <p>Border Countries: {renderBorderCountries()}</p>
             </div>
           </div>
         </div>
