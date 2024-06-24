@@ -80,8 +80,9 @@ export default function InfoPage() {
                 <li>Languages: <span>{country.languages.map(lang => lang.name).join(', ')}</span></li>
               </ul>
             </div>
-            <div>
-              <p>Border Countries: {renderBorderCountries()}</p>
+            <div className='BorderCountries-Container'>
+              <div className='label-border-countrie'>Border Countries: </div>
+              <div>{renderBorderCountries()}</div>
             </div>
           </div>
         </div>

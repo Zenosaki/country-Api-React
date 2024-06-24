@@ -1,15 +1,15 @@
-.Info-Page-Container{
-  transition: all 0.5s ease;
+.Info-Page-Container {
   width: 100%;
-  height: 92vh;
-  padding: 8vh 4%;
-  padding-right: 5%;
-  color:$VeryDarkBlue ;
-  .Go-Back-Button-Container{
+  padding: 8vh 5.5%;
+  height: 100vh;
+
+  .Go-Back-Button-Container {
     padding-top: 20%;
     text-decoration: none;
-    .Go-Back-Button{
-      @include flex(center,center);
+
+    .Go-Back-Button {
+      transition: all 0.5s ease;
+      @include flex(center, center);
       gap: 10px;
       padding: 10px 40px;
       font-size: 15px;
@@ -20,58 +20,160 @@
       border-radius: 5px;
     }
   }
-  .Main-content{
-    padding-top: 8vh;
-    width: 100%;
-    height: 80%;
-    @include grid(45% 1fr,13%,auto);
-    align-items: center;
-    .Country-Flag{
+
+  .Main-content {
+    padding-top: 11vh;
+    display: grid;
+    grid-template-columns: 44% 1fr;
+    column-gap: 11%;
+
+    .Country-Flag {
       width: 100%;
       height: 100%;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      img{
+
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
     }
-    .Country-Informations{
+
+    .Country-Informations {
       width: 100%;
       height: 100%;
     }
   }
 }
-}
-.Country-Details{
+
+.Country-Details {
   display: flex;
   justify-content: space-between;
-  padding-top: 5%;
-  padding-bottom: 10%;
-  ul{
-    li{
+  padding-top: 4%;
+  padding-bottom: 13%;
+
+  ul {
+    li {
       list-style-type: none;
       padding: 5px;
     }
   }
 }
 
-.Info-Page-Dark-Mode-On{
+.BorderCountries-Container {
+  div {
+    display: inline;
+  }
+
+  .label-border-countrie {
+    padding-right: 13px;
+  }
+
+  .BorderCountry-Button {
+    padding-right: 5px;
+    width: 100%;
+
+    button {
+      transition: all 0.5s ease;
+      padding: 5px 20px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.283);
+    }
+  }
+}
+
+.Info-Page-Dark-Mode-On {
   transition: all 0.5s ease;
   background-color: $VeryDarkBlue1;
   color: $White;
-  .Go-Back-Button{
+
+  .Go-Back-Button {
     transition: all 0.5s ease;
     color: $White;
-    background-color:$DarkBlue;
+    background-color: $DarkBlue;
   }
-  .Country-Details{
-    ul{
-      li{
-        span{
+
+  .Country-Details {
+    ul {
+      li {
+        span {
+          transition: all 0.5s ease;
           color: $White;
         }
+      }
+    }
+  }
+
+  .BorderCountry-Button {
+    button {
+      transition: all 0.5s ease;
+      background-color: $DarkBlue;
+      color: $White;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .Go-Back-Button {
+    scale: 0.8;
+  }
+
+  .Info-Page-Container {
+    width: 100%;
+    font-size: x-small;
+    padding: 8vh 5.5%;
+    height: 100%;
+
+    .Main-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 0;
+    }
+
+    .Country-Flag {
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .Country-Informations {
+      padding-top: 40px;
+      width: 100%;
+    }
+  }
+
+  .Country-Details {
+    flex-direction: column;
+    padding-bottom: 13%;
+
+    ul {
+      padding-top: 15px;
+      li {
+        list-style-type: none;
+        padding: 5px;
+        font-size: small;
+      }
+    }
+  }
+
+  .BorderCountries-Container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .label-border-countrie {
+      padding-right: 13px;
+    }
+
+    .BorderCountry-Button {
+      button {
+        font-size: xx-small;
+        padding: 5px 20px;
       }
     }
   }

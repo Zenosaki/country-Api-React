@@ -1,18 +1,16 @@
 .Countries-Cards-Section{
   width: 100%;
-  padding-left: 4%;
-  padding-right: 5%;
+  padding: 0px 5.5%;
   @include grid(1fr 1fr 1fr 1fr,70px,70px);
   .card-Container{
-    max-width:360px;
-    height: 450px;
+    max-width:350px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     .logo{
       width: 100%;
-      height: 55%;
+      height: 40%;
       img{
         width: 100%;
         height: 100%;
@@ -20,7 +18,7 @@
       }
     }
     .Country-Info{
-      padding:8% 8%;
+      padding: 8%;
       flex: 1;
       h3{
         padding-bottom: 15px;
