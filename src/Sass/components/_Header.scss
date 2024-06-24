@@ -1,0 +1,20 @@
+.headerContainer{
+  width: 100%;
+  padding: 24px 5.5%;
+  font-weight: bold;
+  transition: all 0.5s ease;
+  @include flex(center,space-between);
+  .Dark-Mode-Button{
+    @include flex(center,center);
+    gap: 10px;
+    cursor: pointer;
+  }
+}
+.Dark-Mode-On {
+  background-color: $DarkBlue;
+  color: $White;
+}
+.Dark-Mode-Off {
+  background-color: $White;
+  color: $VeryDarkBlue;
+}
