@@ -4,13 +4,14 @@
   @include grid(1fr 1fr 1fr 1fr,70px,70px);
   .card-Container{
     max-width:350px;
+    height: 330px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     .logo{
       width: 100%;
-      height: 40%;
+      height: 50%;
       img{
         width: 100%;
         height: 100%;
